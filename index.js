@@ -17,8 +17,8 @@ app.use("/api", router);
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    app.listen(process.env.PORT || 8080, () => {
-      console.log("server listening on port " + process.env.PORT);
+    app.listen(process.env.APP_PORT || 8080, () => {
+      console.log("server listening on port " + process.env.APP_PORT);
     });
   })
   .catch((e) => {
