@@ -16,7 +16,14 @@ module.exports = model(
         type: Number,
         required: true,
       },
-
+      company: {
+        type: String,
+        required: true,
+      },
+      subject: {
+        type: String,
+        required: true,
+      },
       message: {
         type: String,
         required: true,

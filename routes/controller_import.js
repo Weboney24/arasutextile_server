@@ -4,7 +4,7 @@ const { clientLogin, clientSignup, clientCheckloginstatus, getAllClientUsers, up
 const { addReview, getreveiewbyproduct, getmyreviewall, getadminsideReview, deleteMyReview, updateMyReview } = require("../controller/review.controller");
 const { addblog, getblog, editblog, deleteblog } = require("../controller/blog.controller");
 const { sendForgetPasswordMail, resetPassword, verfiyLink, craeteOrderId } = require("../controller/mail.controller");
-const { addenquires, getenquires, getsinglnquires } = require("../controller/enquires.controllers");
+const { addenquires, getenquires, getsinglnquires, addNewEmail, sendVouter } = require("../controller/enquires.controllers");
 
 module.exports = {
   login,
@@ -46,9 +46,11 @@ module.exports = {
   craeteOrderId,
   verfiyLink,
   resetPassword,
+  sendVouter,
 
   //enquires
   addenquires,
   getenquires,
   getsinglnquires,
+  addNewEmail,
 };
