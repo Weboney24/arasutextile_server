@@ -22,10 +22,4 @@ router.use("/mail", mail_routes);
 // help
 router.use("/help", enquires_routes);
 
-// section
-
-// cart
-
-//clone
-
 module.exports = router;
