@@ -14,11 +14,12 @@ app.use(morgan("dev"));
 
 app.use("/api", router);
 
+const PORT = process.env.APP_PORT || 8080;
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
-    app.listen(process.env.APP_PORT || 8080, () => {
-      console.log("server listening on port " + process.env.APP_PORT);
+    app.listen(PORT, "127.0.0.1", () => {
+      console.log("server listening on 127.0.0.1:" + PORT);
     });
   })
   .catch((e) => {
