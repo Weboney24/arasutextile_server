@@ -13,7 +13,7 @@ module.exports = model(
         required: true,
       },
       phone: {
-        type: Number,
+        type: String,
         required: true,
       },
       company: {

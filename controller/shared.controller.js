@@ -18,7 +18,6 @@ const UploadImage = async (req, res) => {
       Bucket: process.env.AWS_BUCKET,
       Body: req.file.buffer,
       Key: `${Date.now()}${filepath.extname(req.file.originalname)}`,
-      ACL: "public-read",
     };
     const uploadMeadia = new PutObjectCommand(params);
     await s3Client.send(uploadMeadia);
